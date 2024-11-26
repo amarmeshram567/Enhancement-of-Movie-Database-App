@@ -1,0 +1,30 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn {
+  background-color: rgb(219, 230, 95);
+  color: rgb(5, 13, 19);
+  width: 80px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.page-no {
+  color: rgb(159, 77, 18);
+  padding: 10px;
+  font-family: 'Caveat';
+  font-weight: 700;
+}
