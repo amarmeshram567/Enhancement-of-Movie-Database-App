@@ -10,8 +10,9 @@ import SearchMoviesContext from './context/SearchMoviesContext'
 
 import './App.css'
 
-const API_KEY = 'f32b79895b21468afbd6d5342cbf3da'
+const API_KEY = 'f32b79895b21468afbdd6d5342cbf3da'
 
+// write your code here
 const App = () => {
   const [searchResponse, setSearchResponse] = useState({})
   const [apiStatus, setApiStatus] = useState('INITIAL')
@@ -33,6 +34,7 @@ const App = () => {
   const onTriggerSearchingQuery = async (page = 1) => {
     setApiStatus('IN_PROGRESS')
     const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchInput}&page=${page}`
+
     const response = await fetch(apiUrl)
     const data = await response.json()
     setSearchResponse(getUpdatedData(data))
@@ -49,7 +51,7 @@ const App = () => {
         onChangeSearchInput,
       }}
     >
-      <div className="app">
+      <div className="App d-flex flex-column">
         <Switch>
           <Route exact path="/" component={Popular} />
           <Route exact path="/top-rated" component={TopRated} />

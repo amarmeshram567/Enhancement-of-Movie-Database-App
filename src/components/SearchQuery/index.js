@@ -12,7 +12,7 @@ const SearchQuery = () => {
   const renderEmptyView = () => (
     <div className="empty-view-container">
       <h1>No results found.</h1>
-      <p>Please Try to Search again!</p>
+      <p>Don not get worried, Try to search again.</p>
     </div>
   )
 
@@ -23,7 +23,7 @@ const SearchQuery = () => {
       return renderEmptyView()
     }
     return (
-      <ul className="row p-0 ms-0 me-0 mt-3 ul-list">
+      <ul className="row p-0 ms-0 me-0 mt-3">
         {results.map(movie => (
           <MovieCard key={movie.id} movieDetails={movie} />
         ))}

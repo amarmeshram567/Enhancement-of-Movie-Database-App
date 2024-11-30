@@ -8,8 +8,11 @@ const NavBar = props => {
   const renderSearchBar = () => (
     <SearchMoviesContext.Consumer>
       {value => {
-        const {onTriggerSearchingQuery, onChangeSearchInput, searchInput} =
-          value
+        const {
+          onTriggerSearchingQuery,
+          onChangeSearchInput,
+          searchInput,
+        } = value
 
         const onChangeHandler = event => onChangeSearchInput(event.target.value)
 
@@ -30,7 +33,7 @@ const NavBar = props => {
               placeholder="Search"
             />
             <button
-              className="btn btn-outline-info button-details"
+              className="btn btn-outline-info"
               type="button"
               onClick={onSearchHandler}
             >
